@@ -1,0 +1,82 @@
+Pandas
+
+Explore:
+	df.info(verbose=None, buf=None, max_cols=None, memory_usage=None, null_counts=None)
+	df.describe(percentiles=None, include=None, exclude=None)
+	df.dtypes
+	df.index ; df.index.names
+	df.columns; df.columns.names
+	df.shape
+	df.head(n=5)
+	df.tail(n=5)
+
+
+Query
+	df[]
+	df.loc[]			df.at[]
+	df.iloc[]			df.iat[]
+	df.xs()
+	df.filter(items=None, like=None, regex=None, axis=None)
+	df.query(expr, inplace=False, **kwargs)
+	df.where()
+	df.mask()
+	df.drop()
+	df.copy()
+
+
+Index
+re
+	df.reanme(mapper=None, index=None, columns=None, axis=None, copy=True, inplace=False, level=None)
+	df.reindex(labels=None, index=None, columns=None, axis=None, method=None, copy=True, level=None, fill_value=nan, limit=None, tolerance=None)
+set
+	df.set_index((keys, drop=True, append=False, inplace=False, verify_integrity=False))
+	df.reset_index(level=None, drop=False, inplace=False, col_level=0, col_fill='')
+sort
+	df.sort_index(axis=0, level=None, ascending=True, inplace=False, kind='quicksort', na_position='last', sort_remaining=True, by=None)
+	df.sort_level(level=0, axis=0, ascending=True, inplace=False, sort_remaining=True)
+swaplevel
+	df.swaplevel(i=-2, j=-1, axis=0)
+drop
+	df.droplevel()
+stack & unstack
+	df.stack(level=-1, dropna=True)
+	df.unstack(level=-1, fill_value=None)
+
+Value
+drop
+	df.drop(labels=None, axis=0, index=None, columns=None, level=None, inplace=False, errors='raise')
+replace
+	df.replace(to_replace=None, value=None, inplace=False, limit=None, regex=False, method='pad', axis=None)
+na
+	df.dropna()
+	df.fillna()
+	df.isna()
+	df.notna()
+	df.isnull()
+sort
+	s.argsort()
+	df.rank()
+	df.sort_values()
+merge & concat
+	np.concatenate()
+	pd.concat()
+	ser.combine_first(other)
+	pd.merge()
+	df.join()
+pivot
+	df.pivot()
+	pd.pivot_table()
+apply
+	df.apply(func, axis=0, broadcast=False, raw=False, reduce=None, args=(), **kwds)
+	df.applymap()
+groupby
+	df.groupby(by, axis, level, as_index, sort, group_keys, squeeze, observed)
+	df.agg(func, axis=0)
+	df.transform()
+
+DateTime
+	pd.date_range(start=None, end=None, periods=None, freq='D', tz=None, normalize=False, name=None, closed=None, **kwargs)
+	pd.to_datetime(arg, errors='raise', dayfirst=False, yearfirst=False, utc=None, box=True, format=None, exact=True, unit=None, infer_datetime_format=False, origin='unix')
+
+Dtype
+	df.astype(dtype, copy=True, errors='raise', **kwargs)
