@@ -43,5 +43,5 @@ Extension:
 
 Multiple Outputs:
 	from IPython.core.interactiveshell import InteractiveShell 
-	InteractiveShell.ast_node_interactivity = 'all' #默认为'last'
+	InteractiveShell.ast_node_interactivity = 'all' # default:"last"
 
