@@ -1,35 +1,47 @@
 JupyterLab
 	JupyterLab is a next-generation web-based user interface for Project Jupyter.
 
+
+	notebook	: document + kernal + console
+	text editor	:
+	termial		:
+	other		:
+
+
 Install:
 	pip install jupyterlab
 Launch:
+	jupyter lab
 	localhost:8888/lab
 
 UI:
-	menu bar
-		file edit view run kernel tabs settings help
-	side bar
-		file running tabs command tools extentions
-	main work area:
-		notebook text activities(console & terminals)
+	menu bar		: file edit view run kernel tabs settings help
+	side bar		: file running tabs command tools extentions
+	main work area	: notebook text activities(console & terminals)
 
 View:
-	main work area: single-document mode
-	notebook: new view, new console
-	output:	enbale scrolling; new view
+	main work area	: single-document mode
+	notebook		: new view, new console
+	output			: enbale scrolling, new view
 
 Tips:
-	completion: Tab,Tab
-	tooltips: focus , Shift + Tab
-	help:show contextual help
+	completion		: Tab, Tab
+	tooltips		: focus , Shift + Tab
+	help			: show contextual help
 
-InterActive:
+Extension:
+	+ Settings
+		Enable Extension Manager
+	+ jupyter labextension
+		jupyter labextension --help
+		jupyter labextension list
+		jupyter labextension install extension_name
+	+ pip
+		pip install extension_name
+		jupyter serverextension enable extension_name
+		jupyter lab build
+
+Multiple Outputs:
 	from IPython.core.interactiveshell import InteractiveShell 
 	InteractiveShell.ast_node_interactivity = 'all' #默认为'last'
 
-Extension:
-	(Settings - Enable Extension Manager)
-	jupyter labextension --help
-	jupyter labextension list
-	jupyter labextension install extension_name
