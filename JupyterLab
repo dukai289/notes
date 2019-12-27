@@ -1,9 +1,9 @@
 JupyterLab
 	JupyterLab is a next-generation web-based user interface for Project Jupyter.
 
-install:
+Install:
 	pip install jupyterlab
-launch:
+Launch:
 	localhost:8888/lab
 
 UI:
